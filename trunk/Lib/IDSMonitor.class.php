@@ -29,7 +29,6 @@ require_once(dirname(__FILE__) . "/IDSConverter.class.php");
  * This helper function replaces the PHP5 exception mechanism
  *
  * @author Stefan Gehrig (gehrig@ishd.de)
- * @package PHP4IDS
  * @version	0.1
  * @param sring $message
  */

@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class IDSMonitor</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> IDSMonitor</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Introdusion Dectection System</p>
+<p class="description"><p>This class provides function(s) to scan incoming data for  malicious script fragments</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Stefan Gehrig (gehrig@ishd.de)</li>
+				<li><span class="field">version:</span> 0.2</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_IDSMonitor.class.php.html">/IDSMonitor.class.php</a> (line <span class="field"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a50">50</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																								<div class="var-title">
+					<img src="../media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$mExceptions" title="details" class="var-name">$mExceptions</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$mRequest" title="details" class="var-name">$mRequest</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$mScanKeys" title="details" class="var-name">$mScanKeys</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type"><a href="../PHP4IDS/Storage/IDSStorageProvider.html">IDSStorageProvider</a></span>
+					<a href="#$mStorage" title="details" class="var-name">$mStorage</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$mTags" title="details" class="var-name">$mTags</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																							
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">IDSMonitor</span>
+										<a href="#IDSMonitor" title="details" class="method-name">IDSMonitor</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$request</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$storage</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span> = <span class="var-default">null</span>], <span class="var-type"><a href="../PHP4IDS/Storage/IDSStorageProvider.html">IDSStorageProvider</a></span>&nbsp;<span class="var-name">$storage</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#Detect" title="details" class="method-name">Detect</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#Exceptions" title="details" class="method-name">Exceptions</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#Iterate" title="details" class="method-name">Iterate</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$report</span>, <span class="var-type"><a href="../PHP4IDS/IDSReport.html">IDSReport</a></span>&nbsp;<span class="var-name">$report</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#Match" title="details" class="method-name">Match</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$filter</span>, <span class="var-type"><a href="../PHP4IDS/Filter/IDSFilter.html">IDSFilter</a></span>&nbsp;<span class="var-name">$filter</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PHP4IDS/IDSReport.html">IDSReport</a></span>
+										<a href="#Run" title="details" class="method-name">&amp;Run</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#ScanKeys" title="details" class="method-name">ScanKeys</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#SetExceptions" title="details" class="method-name">SetExceptions</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$exceptions</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#SetScanKeys" title="details" class="method-name">SetScanKeys</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$scanKeys</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">$exceptions</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$mExceptions" id="$mExceptions"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$mExceptions</span>
+			 = <span class="var-default">array('__utmz')</span>			(line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a82">82</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Request keys not to scan</p>
+<p class="description"><p>This array is meant to define which variables need to be ignored  by the PHP4IDS - default is the utmz google analytics parameter</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$mRequest" id="$mRequest"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$mRequest</span>
+			 = <span class="var-default">null</span>			(line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a65">65</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Request Data to scan for malicious script fragments</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$mScanKeys" id="$mScanKeys"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$mScanKeys</span>
+			 = <span class="var-default">false</span>			(line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a90">90</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Scan request keys for malicious data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$mStorage" id="$mStorage"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../PHP4IDS/Storage/IDSStorageProvider.html">IDSStorageProvider</a></span>
+			<span class="var-name">$mStorage</span>
+			 = <span class="var-default">null</span>			(line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a72">72</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Storage provider from where to get filter rules</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$mTags" id="$mTags"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$mTags</span>
+			 = <span class="var-default">null</span>			(line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a58">58</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Assembled tags</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodIDSMonitor" id="IDSMonitor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor IDSMonitor</span> (line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a100">100</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">IDSMonitor</span>
+		<span class="method-name">
+			IDSMonitor
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$request</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$storage</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span> = <span class="var-default">null</span>], <span class="var-type"><a href="../PHP4IDS/Storage/IDSStorageProvider.html">IDSStorageProvider</a></span>&nbsp;<span class="var-name">$storage</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$request</span><span class="var-description">: Request array</span>			</li>
+					<li>
+				<span class="var-type"><a href="../PHP4IDS/Storage/IDSStorageProvider.html">IDSStorageProvider</a></span>
+				<span class="var-name">$storage</span><span class="var-description">: Filter storage object</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tags</span><span class="var-description">: List of tags where filters should be applied</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$storage</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodDetect" id="Detect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">Detect</span> (line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a171">171</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks whether given value matches any of the supplied  filter patterns</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			Detect
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodExceptions" id="Exceptions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">Exceptions</span> (line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a237">237</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns exception array</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			Exceptions
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodIterate" id="Iterate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">Iterate</span> (line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a139">139</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Iterates through given data and delegates it  to IDSMonitor::Detect() in order to check for malicious  appearing fragments</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Iterate
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$report</span>, <span class="var-type"><a href="../PHP4IDS/IDSReport.html">IDSReport</a></span>&nbsp;<span class="var-name">$report</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"><a href="../PHP4IDS/IDSReport.html">IDSReport</a></span>
+				<span class="var-name">$report</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$report</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodMatch" id="Match"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">Match</span> (line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a210">210</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Matches given value and/or key against given filter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			Match
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$filter</span>, <span class="var-type"><a href="../PHP4IDS/Filter/IDSFilter.html">IDSFilter</a></span>&nbsp;<span class="var-name">$filter</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"><a href="../PHP4IDS/Filter/IDSFilter.html">IDSFilter</a></span>
+				<span class="var-name">$filter</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$filter</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodRun" id="Run"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">Run</span> (line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a116">116</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Starts the detection mechanism and returns IDSReport</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PHP4IDS/IDSReport.html">IDSReport</a></span>
+		<span class="method-name">
+			&amp;Run
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodScanKeys" id="ScanKeys"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">ScanKeys</span> (line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a257">257</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns value for scan keys</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			ScanKeys
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodSetExceptions" id="SetExceptions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">SetExceptions</span> (line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a225">225</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets exception array</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			SetExceptions
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$exceptions</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$exceptions</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodSetScanKeys" id="SetScanKeys"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">SetScanKeys</span> (line <span class="line-number"><a href="../__filesource/fsource_PHP4IDS__IDSMonitor.class.php.html#a245">245</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets boolean value for scan keys</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			SetScanKeys
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$scanKeys</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">$exceptions</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$exceptions</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$scanKeys</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 13 Aug 2007 12:12:35 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0a2</a>
+	</p>
+	</div></body>
+</html>
