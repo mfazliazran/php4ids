@@ -131,7 +131,7 @@ class IDSFilter
  * filter class used in PHP4IDS.
  *
  * @author Stefan Gehrig (gehrig@ishd.de)
- * @package PDP4IDS
+ * @package PHP4IDS
  * @subpackage Filter
  * @version	0.2
  */
@@ -141,7 +141,6 @@ class IDSRegexpFilter extends IDSFilter
 	 * Returns PCRE flags (default 'ims')
 	 *
 	 * @access 	public
-	 * @package PHP4IDS
 	 * @return string
 	 */
 	function Flags()
